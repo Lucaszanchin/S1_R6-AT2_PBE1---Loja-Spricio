@@ -25,6 +25,18 @@ const clienteModel = {
         const [result] = await pool.query(sql, [pNome, pCpf]);
         return result;
     },
+     atualizarCliente: async (pCpf, pNome, pId ) => {
+        const sql = 'UPDATE clientes SET cpf = ?, nome = ? WHERE id = ?;';
+        const values = [pNome, pCpf, pId]
+        const [result] = await pool.query(sql, values);
+        return result;
+    },
+    deleteCliente: async (pId) => {
+        const sql = "DELETE FROM clientes WHERE id = ?;";
+        const values = [pId]
+        const [rows] = await pool.query(sql, values)
+        return rows
+    }
 
 }
 

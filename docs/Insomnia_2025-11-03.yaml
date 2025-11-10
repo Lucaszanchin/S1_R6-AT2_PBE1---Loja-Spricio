@@ -1,0 +1,283 @@
+type: collection.insomnia.rest/5.0
+name: "Testes Produtos e Clientes "
+meta:
+  id: wrk_7166579f8961451fa0ca6b28034d0ef0
+  created: 1761583701473
+  modified: 1761592358750
+  description: ""
+collection:
+  - name: Clientes
+    meta:
+      id: fld_38e35ceb6d904af79621306a7d2ea85a
+      created: 1761583726714
+      modified: 1761583726714
+      sortKey: -1761583726714
+      description: ""
+    children:
+      - url: http://localhost:8081/clientes
+        name: Select Todos Clientes
+        meta:
+          id: req_2282a8454a2d45a39505829d8eea2c05
+          created: 1761583745860
+          modified: 1761587458535
+          isPrivate: false
+          description: ""
+          sortKey: -1761583745860
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.6.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8081/clientes/1
+        name: Select Cliente Por ID
+        meta:
+          id: req_e76e641c3d1e47c1872f85032114f406
+          created: 1761583773552
+          modified: 1761588611741
+          isPrivate: false
+          description: ""
+          sortKey: -1761583773552
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.6.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8081/clientes
+        name: Registrar Cliente
+        meta:
+          id: req_b0b061a8ee5f4534a6d0f2f1344d4c30
+          created: 1761583817177
+          modified: 1762197523751
+          isPrivate: false
+          description: ""
+          sortKey: -1761583817177
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"nome": "Miguel",
+            	"cpf": "34567890121"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.6.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8081/clientes/1
+        name: Atualizar Cliente
+        meta:
+          id: req_c994a070253e4fbc9946a240180d0e0a
+          created: 1762195758953
+          modified: 1762196237464
+          isPrivate: false
+          description: ""
+          sortKey: -1762195758953
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"nome": "Vitória",
+            	"cpf": 98765432134
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.6.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8081/clientes/3
+        name: Excluir Cliente
+        meta:
+          id: req_fc8c0755823540a5a9a445be2d360890
+          created: 1762197584094
+          modified: 1762197704178
+          isPrivate: false
+          description: ""
+          sortKey: -1762197584094
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/11.6.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Produtos
+    meta:
+      id: fld_f4600c50c03b4374bfe80c798a848506
+      created: 1761588689562
+      modified: 1761588689562
+      sortKey: -1761588689562
+      description: ""
+    children:
+      - url: http://localhost:8081/produtos
+        name: Select Todos Produtos
+        meta:
+          id: req_831a18c2c22d44cbbfa72310647adea0
+          created: 1761588693904
+          modified: 1761588923009
+          isPrivate: false
+          description: ""
+          sortKey: -1761588693904
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.6.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8081/produtos/1
+        name: Select Por ID
+        meta:
+          id: req_866661098cf4491d894b71322fe01592
+          created: 1761588721800
+          modified: 1761589207263
+          isPrivate: false
+          description: ""
+          sortKey: -1761588721800
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.6.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8081/produtos
+        name: Inserir Produto
+        meta:
+          id: req_cb46bc0880954154ac66e5bdd99eda17
+          created: 1761588749056
+          modified: 1761589193294
+          isPrivate: false
+          description: ""
+          sortKey: -1761588749056
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"descricao":"Jhonny Killer",
+            	"valor": 123.45
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.6.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8081/produtos/2
+        name: Atualizar Produto
+        meta:
+          id: req_a990adfa9de042d881bb7193bc08923a
+          created: 1761588805860
+          modified: 1761591964674
+          isPrivate: false
+          description: ""
+          sortKey: -1761588805860
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"descricao": "Tomate Killer",
+            	"valor": 9
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.6.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8081/produtos/1
+        name: Deletar Produto
+        meta:
+          id: req_4b44c7c672bc4b579301d00b3ec8cf4d
+          created: 1761588873295
+          modified: 1761589390076
+          isPrivate: false
+          description: ""
+          sortKey: -1761588873295
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/11.6.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_103d06e324c4b546026e3880e1949b2428a2762b
+    created: 1761583701487
+    modified: 1761583701487
+environments:
+  name: Base Environment
+  meta:
+    id: env_103d06e324c4b546026e3880e1949b2428a2762b
+    created: 1761583701481
+    modified: 1761583701481
+    isPrivate: false
