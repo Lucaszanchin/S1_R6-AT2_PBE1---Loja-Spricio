@@ -19,7 +19,7 @@ const clienteController = {
 
   buscarClientePorID: async (req, res) => {
     try {
-      const id = Number(req.params.idCliente);
+      const id = Number(req.query.id);
 
       if (!id || !Number.isInteger(id)) {
         return res.status(400).json({ message: 'Forneça um identificador (ID) válido' });
