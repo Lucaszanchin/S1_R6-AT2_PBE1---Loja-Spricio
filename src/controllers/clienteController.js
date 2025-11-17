@@ -82,9 +82,6 @@ const clienteController = {
         return res.status(400).json({ message: 'CPF é obrigatório.' });
       }
 
-      // Garante que é string, remove pontos e traços, e valida tamanho
-      cpf = String(cpf).replace(/[^\d]+/g, '').trim();
-
       if (cpf.length !== 11) {
         return res.status(400).json({ message: 'CPF inválido.' });
       }
