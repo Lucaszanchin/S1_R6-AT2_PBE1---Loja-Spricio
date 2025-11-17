@@ -128,9 +128,9 @@ const clienteController = {
       } else {
         const resultado = await clienteModel.deleteCliente(id);
         if (resultado.affectedRows === 1) {
-          return res.status(200).json({ message: 'O produto foi excluído com sucesso', data: resultado })
+          return res.status(200).json({ message: 'O cleiente foi excluído com sucesso', data: resultado })
         } else {
-          throw new Error("Não foi possível excluir o produto");
+          throw new Error("Não foi possível excluir o cliente");
         }
       }
     } catch (error) {

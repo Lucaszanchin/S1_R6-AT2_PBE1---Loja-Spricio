@@ -1,9 +1,7 @@
 const { produtoModel } = require('../models/produtoModel');
 
 const produtoController = {
-  /**
-   * Retorna todos os produtos cadastrados no banco de dados
-   */
+
   buscarTodosProdutos: async (req, res) => {
     try {
       const resultado = await produtoModel.selecionarTodos();
@@ -19,9 +17,6 @@ const produtoController = {
     }
   },
 
-  /**
-   * Retorna o produto referente ao Id_produto selecionado
-   */
   buscarProdutoPorID: async (req, res) => {
     try {
       const id = Number(req.params.idProduto);
@@ -43,9 +38,6 @@ const produtoController = {
     }
   },
 
-  /**
-   * Inclui um novo produto
-   */
   incluirProduto: async (req, res) => {
     try {
       const { descricao, valor } = req.body;
@@ -67,9 +59,6 @@ const produtoController = {
     }
   },
 
-  /**
-   * Atualiza um produto existente
-   */
   atualizarProduto: async (req, res) => {
     try {
       const idProduto = Number(req.params.idProduto);
@@ -97,7 +86,6 @@ const produtoController = {
         return res.status(404).json({ message: 'Produto não encontrado.' });
       }
 
-      // Atualiza os dados
       const novaDescricao = descricao ?? produtoAtual[0].descricao;
       const novoValor = valor ?? produtoAtual[0].valor;
 
